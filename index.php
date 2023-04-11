@@ -4,7 +4,7 @@ $password_lenght = $_GET['number'];
 var_dump($password_lenght);
 
 function randomPassword($password_lenght) {
-    $alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!£$%^&*';
+    $alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!£$%^&*?';
     $pass = array(); //remember to declare $pass as an array
     $alphaLength = strlen($alphabet) - 1; //put the length -1 in cache
     for ($i = 0; $i < $password_lenght; $i++) {
@@ -26,7 +26,7 @@ $password = randomPassword($password_lenght);
 <body>
     <form>
         
-        <input type="number" name="number" placeholder="inserisci un numero">
+        <input type="number" name="number" placeholder="inserisci la lunghezza della tua password">
         <button>Invia</button>
     </form>
     <div> <?php echo $password ?></div>
